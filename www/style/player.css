@@ -1,0 +1,90 @@
+.video {
+    position: relative;
+    width: 1280px;
+}
+.video * {
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.video .video-controls {
+    cursor: default;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #00000080;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+.video .video-controls .video-controls-top {
+    width: 100%;
+    height: 5px;
+}
+.video .video-controls .video-controls-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+}
+.video canvas {
+    cursor: pointer;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.video-time {
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.video-total-time {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.video-track-line {
+    cursor: pointer;
+    flex-grow: 1;
+    background-color: darkslategray;
+    height: 5px;
+    border-radius: 3px;
+    z-index: 2;
+    position: relative;
+}
+.video-track-sizer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 5px;
+    background: #FAFC00;
+    width: 0px;
+    z-index: 4;
+}
+.video-track-buffer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 5px;
+    background-color: darkgray;
+}
+.video-fullscreen, .video-play, .videou-pause {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    cursor: pointer;
+    background-image: url('/icons/fullscreen.png');
+    width: 40px;
+    height: 20px;
+    background-size: contain;
+    filter: invert(1);
+    background-position: center;
+    background-repeat: no-repeat;
+}

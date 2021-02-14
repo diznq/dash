@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream</title>
+    <script src="js/rel/app.js"></script>
+    <link href="style/player.css" rel="stylesheet">
+</head>
+<body>
+    <div class="video" id="container">
+        <canvas width="1280" height="720"></canvas>
+        <div class="video-controls">
+            <div class="video-controls-top"><!--
+            --><div class="video-track-line"><div class="video-track-sizer"></div></div><!--
+            --></div>
+            <div class="video-controls-bottom">
+                <div class="video-time">00:00</div>/
+                <div class="video-total-time">--:--</div>
+                <div class="video-fullscreen"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function(){
+            var streamName = (location.hash || "#stream").substr(1);
+            var useAES = streamName.startsWith("aes:");
+            if(useAES) streamName = streamName.substr(4);
+            StreamVideo(document.getElementById("container"), streamName, useAES);
+        })();
+    </script>
+</body>
+</html>

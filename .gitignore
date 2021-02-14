@@ -1,0 +1,9 @@
+*.mp4
+*.mpd
+*.m4s
+*.dash
+*.mpd
+*.tmp
+package-lock.json
+node_modules/
+www/js/rel/*.*
